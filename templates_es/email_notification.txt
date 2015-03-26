@@ -1,0 +1,16 @@
+$rate_response
+Ticket ID: $id 
+Asunto: $subjet 
+Urgencia: $urgency 
+Departmento: $departament 
+Fecha:$date
+____________________________________________________________________ 
+
+  $message
+____________________________________________________________________ 
+$open_ticket 
+Or visit: $siteurl (only registered users).
+
+$footer
+
+

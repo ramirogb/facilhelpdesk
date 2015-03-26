@@ -1,0 +1,495 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Documento sin t&iacute;tulo</title>
+<link href="styles.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<h3 align="center" class="titulo">&nbsp;</h3>
+<h3 align="center" class="titulo">Facil HelpDesk Manual, version 1.5.5</h3>
+<table width="80%"  border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td><p class="titulo"><a href="#1">Introduction</a></p>
+      <p class="titulo"><a href="#10">Why </a><a href="#10">Facil HelpDesk?</a></p>
+      <p class="titulo"><a href="#features">Features</a></p>
+      <p class="titulo"><a href="#11">Requirements</a></p>
+      <p class="titulo"><a href="#2">How To Install</a></p>
+      <p class="titulo"><a href="#3">About users of Facil HelpDesk and accounts</a></p>
+      <p><span class="titulo"><a href="#4">How To Register (create an account for using <a href="#3">Facil HelpDesk</a> for end users from the end user url: index.php)</span></p>
+    <p><span class="titulo"><a href="#5">Creating users from administrative url (index_admin.php) </a></span></p>
+    <p><span class="titulo"><a href="#6">End-user area</a></span></p>
+    <p><span class="titulo"><a href="#7">Staff Area and Administrator Area </a></span></p>
+    <p><span class="titulo"><a href="#open">Opening  tickets for answering and changing departament or assign to a specific person</a></span></p>
+    <p><a href="#notifications">Understanding email notifications </a></p>
+    <p><span class="titulo"><a href="#8">Control Toolbar</a></span></p>
+    <p><span class="titulo"><a href="#9">Details of settings</a></span></p>
+    <p><a href="#reports">Reports</a></p>
+    <p><a href="#14">Creating tickets</a> </p>
+    <p><a href="#16">Personalization</a></p>
+    <p><span class="titulo"><a href="#18">Multilanguaje support </a></span></p>
+    <p><a href="#piping">Email piping(requires cron) </a></p>
+    <p><span class="titulo"><a href="#12">Common Questions</a></span></p>
+    <p><span class="titulo"><a href="#17"> Typical Errors and solutions </a></span></p>
+    <p><a href="#maintenance">Maintenance and limitations </a></p>
+    <p><span class="titulo"><a href="#13"><a href="#3">Facil HelpDesk</a> CUSTOMER MANAGEMENT SOFTWARE EULA</span></p>
+    </td>
+  </tr>
+</table>
+<p class="titulo">&nbsp;</p>
+<h3 class="titulo">Introducti<a name="1"></a>on</h3>
+<p>Facil HelpDesk is an  customer support management system for PHP, <strong>based in tickets</strong>, enabling users
+  to track and manage their support requests faster. Facil HelpDesk is a feature packed browser based help desk
+  management application designed to streamline the operation of managing
+support requests.</p>
+<p>Was designed for  small and medium companies with one or more members of staff or for
+  those who want to organise  communications.<br>
+With Facil HelpDesk, you now have access to an article knowledge base.</p>
+<p>Facil Help Desk <strong>handle tickets created from web interface or direct email</strong>. For an demostration  visit <a href="http://www.demo.cromosoft.com">http://www.demo.cromosoft.com</a> </p>
+<table width="800" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="172"  valign="top">Your users creates &quot;tickets&quot; from web interface<strong>(tickets.php</strong>) or by email. </td>
+    <td width="357" rowspan="2"><img src="../images/helpdesk.jpg" width="350" height="200"></td>
+    <td valign="top" width="200"><p>Your staff answer &quot;tickets&quot; from <strong>tickets2.php</strong> </p>
+    </td>
+  </tr>
+  <tr>
+    <td width="172"  valign="top"><img src="../images/customers.gif" width="74" height="70"><img src="../images/arrow1.gif" width="150" height="30"></td>
+    <td valign="top"><p><img src="../images/support.gif" width="147" height="98"></p>
+    <p><img src="../images/arrow2.gif" width="150" height="30"></p></td>
+  </tr>
+</table>
+<p><img src="../images/ticket.gif" width="658" height="605" border="1"></p>
+<h3><span class="titulo">Why Facil HelpDesk?</span><a name="10"></a><br>
+</h3>
+<p>Here are a few reasons why you should choose Facil HelpDesk:</p>
+<ul>
+  <li>
+    <p> Save time, doesn't have complex options, no more reading of extensive manuals from cover to conver.</p>
+  </li>
+  <li>
+    <p> Facil HelpDesk does the job for you: you can offer professional and unparalleled customer support for your products or services in just a few mouse clicks. You can learn to use Facil HelpDesk in 5 minutes! </p>
+  </li>
+  <li>
+    <p> Save money, stop wasting money on software with hundreds of features that you don't need, With Facil HelpDesk, your customer support issues are easily resolved. </p>
+  </li>
+</ul>
+<h3 class="titulo">Features<a name="10"></a></h3>
+<ul>
+  <li>Multiple departaments</li>
+  <li>Three levels of access: users, staff members and administrators</li>
+  <li>Tickets submissiones by web or email including several atachments  16MB(max size), requires a cron job who executes a script. </li>
+  <li>Notifications of new tickets or responses by email </li>
+  <li>Change departament of a ticket, assign ticket to a specific person with email notification to the specific person. </li>
+  <li>Statistics related to tickets (optional GD), polls of responses</li>
+  <li>Email verification when activating accounts </li>
+  <li>Creation of articles </li>
+  <li>Preview of tickets </li>
+</ul>
+<h3><span class="titulo">Requirements</span><a name="11"></a></h3>
+<p> To use Facil HelpDesk your server should have the sufficient hardware<br>
+  and software dependencies installed.<br>
+  <strong>Hardware Requirements</strong><br>
+&middot; 600 MHz CPU<br>
+&middot; 128 MB RAM<br>
+&middot; Enough Hard Drive space to unpack, install Facil HelpDesk and for the<br>
+  database requirements (At least 5MB space is recommended), the installer compressed in rar or zip format is about 1MB </p>
+<p><strong>Software Dependencies</strong><br>
+  Before installing Facil HelpDesk you must have the following dependencies
+  installed:<br>
+&middot; PHP 5 or 4, <strong>PHP must be configured to send emails by mail</strong>, SMTP, sendmail or qmail. The first method is recommended (mail function of php). <br>
+&middot; GD 2 library for creating graphs (suggested) <br>
+&middot; MySQL 4.1.22-standard or better, for basic functions is enought version 4.01. For new reports is required version 4.1 who supports subqueries<br>
+&middot; Web Server (e.g. Apache/IIS), access to the control panel of your web server, suggested Cpanel. Facil HelpDesk uses MyIsam tables to avoid problems use a  filesystem who doesn't have  limit storage of  large a files (2GB or more).</p>
+<p>&nbsp;</p>
+<h3><span class="titulo">How To Install</span><a name="2"></a></h3>
+<p><br>
+  <span class="content">Quick Installation Overview</span></p>
+<p>  These quick install instructions are intended for people with existing experience in
+  installing web based applications.<br>
+  Upload/De-compress Files on target server, the installer is about 1MB.  </p>
+<p>Create one MySQL Database
+    then execute <strong>install.php</strong> file in your web browser, and perform the installation (done in three steps). This same file can be used to change database, and create a new administrator(other or others  administrators will be deleted). <span class="red2">After of installing  Facil HelpDesk delete install.php</span> for security. </p>
+<p><img src="../images/install.png" width="703" height="400"><br>
+  Install is  complete after of doing the three steps. Is important the <strong>host, database, username and password for Mysql</strong> as shown in the figure. </p>
+<p><img src="../images/mysql.png" alt="Mysql database settings" width="664" height="233"></p>
+<p>After of filling the first form, you need to enter an administrator and password and click Submit as shown in the below figure. <img src="../images/install2.gif" width="675" height="250"></p>
+<p>Finally we were in the step 3, you are ready for login in the Administrative Area(index_admin.php).</p>
+<p> <img src="../images/install3.gif" width="446" height="258"></p>
+<p>Basic installation won't require more of 40 seconds. Now that you log in with your username and password. You should create Urgency levels and Departaments. Before of creating any ticket. </p>
+<p>You need to configure an smtp account for email notifications at least. select send notifications as html(multipart/alternative) not plain text. The  charset is &quot;iso-8859-1&quot;, if required edit PhPMailer. PhPMailer uses mail, sendmail, qmail and SMTP. Ask to your web hosting provider about the right method. </p>
+<h3 class="titulo">about users of Facil HelpDesk<a name="3"></a> and accounts </h3>
+<p><br>
+  Facil HelpDesk has three types of users:<br>
+</p>
+<p><span class="content">End-user</span>(<span class="content">User Accounts</span>)<br>
+  This user can create new support tickets, and receive answers for their tickets
+  through a simple  interface or email. They can also post follow-ups and
+  messages to departaments( every departament should have one or more staff members). End users log requests in the system via the web based
+form.</p>
+<p><br>
+  <span class="content">Staff member</span><br>
+  The staff member are the ones that answer to user requests. They can view the
+  tickets, reply to tickets, assign tickets to other 
+  departments. They can also search for tickets and perform most common ticket
+  operations. Staff users are created from the administration section, these are the
+  users who will respond and manage incoming tickets. Each person you wish to grant
+  access to the staff area requires a valid staff account.<br>
+</p>
+<p><span class="content">Administrator</span><br>
+  This has the role of a super-user, he is the one that configures all the options in
+  Facil HelpDesk. The administrator configures essentially everything that can be
+  configured, including  departments,email options, delete, suspend users, etc. There is only one
+administrator by default, created during the last step of installation. </p>
+<p>In the next image we can see  urls that are used for login. <img src="../images/login.png" width="550" height="200" border="0"></p>
+<p>It means that  <strong>end users only are able to fill their user and password</strong> at index.php, if they tries to use index_admin.php, they will be redirected to index.php </p>
+<h3><span class="titulo">How To Register(c<a name="4"></a>reate an account for using Facil HelpDesk for end users from index.php)</span></h3>
+<p><br>
+  Once you open Facil Help Desk, <strong>index.php</strong>, you will be prompted with the next screen:<img src="../images/index.gif" width="499" height="351"></p>
+<p>To register for a new account, simply click the<strong> Register</strong> link and the registration
+process will begin. You will be prompted with the next page:</p>
+<p><img src="../images/register.gif" width="592" height="391"></p>
+<p>You must enter your username, your password, your name and  email, as
+  well as the company name and the URL(optionals). Once you have entered all the required
+  information, press the Submit button. You should receive a  email for confirmation shortly (if <strong>&quot;Enable email verification</strong>&quot; is active),
+  the open your email client and open the new email, click the Activate now link and your browser will open a new url, finally the active page will show you: <strong>your registration has been completed</strong>  successfully (only after of clicking the email confirmation)</p>
+<p><span class="content"><img src="../images/email_confirmation.gif" width="423" height="73" border="1"></span></p>
+<h3 class="titulo">Creating users from <a name="5"></a>administrative url (index_admin.php) </h3>
+<p>The same users, the staff members or the administrator are able to create accounts. But users or staff members are able to create single users, <strong><em>only the administrator can add more staff members</em>.</strong></p>
+<p>If you create a user who is moderator or staff member(those who will answer tickets), you should <strong>include this user to the respective Departament</strong>, else he won't be able to respond nor watch any ticket. Isn't enought to be staff member.</p>
+<p>Only the administrator is able to change permissions, save settings, delete users and others features. For example if an staff member tries to save settings, the action will fail and he will get an warning in the top if the current window : <span class="comment2">Denied only administrator</span></p>
+<h3 class="titulo">End-user area<a name="6"></a></h3>
+<p><br>
+Navigate to URL of your website<strong class="boxbordertop"> index.php</strong> and you should see the Facil Help Desk startup screen:<img src="../images/login2.png" width="494" height="342"></p>
+<p><span class="content">Your Account</span><br>
+</p>
+<p>Next, login into your account. To do this, simply follow the Log In box below, and enter your username in the first entry field and the password in the second. After you have entered them (please make sure they are entered correctly), press the Submit button to authentify yourself in the system.</p>
+<p>Once you have entered  with your login details and you are logged in into your Facil Help Desk, end user account, you will see the main screen from<br>
+  where you can choose what to do.</p>
+<p><br>
+<img src="../images/main_user.png" width="630" height="302">Click &quot;New ticket&quot; for creating a new case or ticket, the staff member of a given web site will receive it and reply. Your tickets will be stored except if the staff member decides to delete them. If a ticket is closed you can reopen it.</p>
+<h3 class="titulo"></h3>
+<h3><span class="titulo">Staff Area and Administrator Area <a name="7"></a></span></h3>
+<p><br>
+  Getting started in this area is also simple, and can be followed in a few quick 
+  and easy simple steps.
+Navigate to the URL of your website: <strong>i<span class="boxbordertop">ndex_admin.php</span> . </strong></p>
+<h3><span class="titulo">Opening tickets for answering and changing departament or assign to a specific person<a name="open"></a></span></h3>
+<p>Whe you click on a ticket ID for answering, the ticket and it's answers will be shown, if required you can send the ticket to other departament or assign to a person with two clicks. If you need to change departament only the staff members of the new departament will be shown after of an automatic reload of the ticket.</p>
+<p> <img src="../images/assign_ticket.png" width="995" height="530"></p>
+<h3>Understanding email notifications</h3>
+<p>Facil HelpDesk receives tickets from web and email, every time that a response or an assignement is done a notification can be generated. </p>
+<p><strong>Ocurrences of notifications:</strong></p>
+<p>- The user creates a new ticket, then he receives an email notification when Facil HelpDesk stores his ticket and the departament receives a notification simultaneously with the user. </p>
+<p>- One staff member anwers a ticket, then the user gets a notification, &quot;a response is available&quot;. </p>
+<p>- The user adds a response to an existing ticket, then he receives a notification and also the departament gets one.</p>
+<p>- The administrator assigns a ticket to one individual staff member then the tickets gets &quot;unreaded&quot; and a notification is sent to a individual staff member. </p>
+<p>&nbsp; </p>
+<h3><br>
+  <span class="titulo">Control Toolbar<a name="8"></a></span></h3>
+<p><br>
+  After logging in into the staff area or end user area, you have access to the control toolbar available<br>
+  always at the top of the page you are currently browsing:</p>
+<p><img src="../images/main_tickets.png" width="969" height="506"></p>
+<p> <span class="content">Tickets</span><br>
+  This will open a list of available options just below the control bar (listed in the
+ screenshot below). These are:<br>
+</p>
+<p class="content">New Ticket</p>
+<p> By clicking this link <strong>your staff can create tickets in the system on behalf of users</strong>, or
+  simply as an internal ticket. This is especially required for people who operate call
+  centers or have a phone in help desk.<br>
+  This will log a new ticket, opening a page where you can enter the username of
+  interest, the contact's email, the name of the ticket, the department to whom to
+  address this ticket to, the user to whom to assign this ticket to, the priority of the
+  ticket, its status.</p>
+<p><strong>Important:</strong> Don't use this link if there are hundred or thousand of users, <strong>go to Users</strong>(alphabetically ordered by username) and <strong>Click </strong>the button<strong> Create ticket</strong> as shown in the figure.</p>
+<p><img src="../images/create_ticket.png" width="912" height="298"> </p>
+<p class="content">Search</p>
+<p> This will browse the tickets system looking for subjet, body, username <strong>and will return with tickets</strong> with results if available, use 5 or more characters for search. </p>
+<p><img src="../images/search.png" width="549" height="119"></p>
+<p>Each person you would like to respond to tickets, or manage tickets including the administrator requires a staff account. These accounts are created by the administrator.<br>
+Each staff member will get a username and password, with which they can use to login to the staff section of Facil HelpDesk (<strong>i<span class="boxbordertop">ndex_admin.php</span></strong>). You can also limit access of individual staff members by editing the users profile in &quot;Departaments&quot;. You can give access to as many departments as you wish.</p>
+<h3><span class="titulo"></span><img src="../images/departaments.png" width="898" height="416"></h3>
+<p class="content">knowledge base</p>
+<p>This will open the page of base of articles, where you can search for a specific item in a
+  specific category or create a new one(not end users). </p>
+<p><span class="content">Add a new article</span>(In administrative menu, for staff members and administrator)</p>
+<p><br>
+  This will allow you to add a new article to the knowledge base. This way you can<br>
+  inform users of any vital information.</p>
+<p><img src="../images/articles.png" width="978" height="976"></p>
+<p>If a staff member enters as end user to <strong>index.php</strong>(requires authentication) he will be able to edit and delete comments for every article. This option isn't available for end users. Only they can add comments but not edit nor delete them. Example of an article. </p>
+<p><img src="../images/end_user_articles.png" width="831" height="468"></p>
+<p>There is no relationship between departaments and categories of articles. It is suggested to create several  categories related with departaments. </p>
+<p><strong>Storing images</strong></p>
+<p>The editor used is FCKeditor, to store images create a folder named <strong>UserFiles</strong> in your root web server. Example: http://www.algo.com/UserFiles</p>
+<p><span class="content">Reports</span> (for staff members and administrator)<br>
+  This will open a page of reports, where you can view tickets by assignment, by
+  department, by priority vs status, the number of tickets created by month, date interval, response time, banned tickets and others.</p>
+<p><span class="content">Polls:</span> If polling is enabled edit includes/polls.php, by default there are 4,5 questions, if you want delete 1 , 2 , 3 or 4 of them. The results are stored for every posible question(max 5 in the database), every poll with the case number(ticket ID), can be voted only 5 times and expires.</p>
+<p>In the section &quot;tickets by staff members&quot; there is something that can be confussing, &quot;opened tickets&quot; it means the number of tickets that were read by first time for a user. If a user(of your staff member) has a high value for opened tickets and a low number for closed tickets it means that he is opening ticket and not giving solutions. </p>
+<h3><span class="titulo">Settings</span></h3>
+<p>There are six sections: Basic settings and URLs, colors, Localization, Mysql database, Acess and E-mail </p>
+<p>Every setting has a short explicative label, only the administrator is able to save these settings. </p>
+<h3 class="titulo">Details of settings <a name="9"></a></h3>
+<h3 class="titulo">Basic Settings and URLs</h3>
+<p><span class="content">Site Title:</span> Include an optional title</p>
+<p> <br>
+  <span class="content">URL Base of Installation:</span> Fill the path where was  installed Facil Help Desk on your web server. <br>
+  examples: </p>
+<p>http://www.site.com/tickets/ </p>
+<p>http://www.mywebserver/helpdesk/ </p>
+<p>This url base will be included in every response coming from email from staff members and for other purposes, requires &quot; / &quot; at the end </p>
+<p><strong>Online or under maintenance?</strong> Options: true or false. Disables the interface of end users, usefull if you are making changes in tables of database, repairing, etc. Edit includes/offline.php for personalization this message. </p>
+<p><span class="content">Allow attachments:</span> Sometimes users could send you an file with a image.</p>
+<p><span class="content">Upload Directory:</span> This path is relative to the installation, example: storage/ , requires  &quot;/&quot; at the end. </p>
+<p> <span class="content">Max filesize:</span> Select a proper filesize, usually a file with an image doesn't require more of 100000 bytes. <br>
+  Logo Image URL: Full url of an optional image  of your web site. Recommended 50*200pixels. </p>
+<h3 class="titulo">Reports<a name="reports"></a></h3>
+<p>Facil HelpDesk includes  statistical information about tickets, polls of responses(level of satisfaction), etc.</p>
+<p>Tickets</p>
+<UL>
+  <LI><SPAN class=text>Overview </SPAN>
+  <LI><SPAN class=text>Tickets by staff members (who opens more ticket) </SPAN>
+  <LI><SPAN class=text>Tickets by department (distribution) </SPAN>
+  <LI><SPAN class=text>Tickets by priority vs status </SPAN>
+  <LI><SPAN class=text>Tickets created by month (12 months) </SPAN>
+  <LI><SPAN class=text>Tickets by Date* (interval for new tickets) </SPAN>
+      <TABLE width="62" height="11" border="0">
+        <TBODY>
+          <TR>
+            <TD><img src="../images/date_interval.gif" alt="Pickup date- Date Interval" width="419" height="65"></TD>
+          <TR></TR>
+        </TBODY>
+    </TABLE>
+  <LI class=text>Staff rating (who gives more satisfaction) 
+  <LI class=text>Response time (the time between a new ticket and the response from one staff member) </LI>
+</UL>
+<TABLE borderColor=#f5f5f0 cellSpacing=2 cellPadding=0 width="40%" border=1>
+  <TBODY>
+    <TR class=minititle>
+      <TD class="text"><strong>Banned Tickets </strong>        <p >Tickets that were banned with the ownwer(the username) for any staff member are invisible except here. </p>
+      </TD>
+    </TR>
+    <TR>
+      <TD><ul>
+        <li>Open and banned </li>
+      </ul></TD>
+    </TR>
+    <TR>
+      <TD><ul>
+        <li>Closed and banned </li>
+      </ul></TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<TABLE borderColor=#f5f5f0 cellSpacing=2 cellPadding=0 width="40%" border=1>
+  <TBODY>
+    <TR class=minititle>
+      <TD class="text">
+        <p><strong>Error Log </strong></p>
+        <p>Saves errors of email piping, usually these errors are error with connection POP3 , invalid host, password, etc. </p>
+      </TD>
+    </TR>
+    <TR>
+      <TD>&nbsp;</TD>
+    </TR>
+    <TR>
+      <TD>&nbsp;</TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<p>&nbsp;</p>
+<h3 class="titulo">Colors, style</h3>
+<p><strong>Background color color</strong>: The solid color of top and bottom.</p>
+<p><strong>Menu Colors:</strong> There are four colors, they are used to create two png images with degradation for the navigation menu, the results are stored as: images/bg_blu.png and images/bg_blu2.png. These images are created dinamically when you save your settings. Example: Menu color1 and menu color 1b are used for creating bg_blu.png.</p>
+<p>Text color: The text color can be changed with a mouse click, enter an hexadecimal color in the same way of previous colors.   <br>
+</p>
+<h3><span class="titulo">Localization
+    </span>
+</h3>
+<p><span class="content">Default User Language:</span> If the users doesn't selects a languaje the system will assign one.<br>
+</p>
+<p><span class="content">Date Format</span> :No comments.</p>
+<h3><span class="titulo">Mysql settings</span></h3>
+  The system uses a mysql database with 11 tables, if you alter it the system won't work, unless you execute install.php. For using a mysql database is required: Host, Username, Password and the Database 
+<h3 class="titulo">Access Settings</h3>
+<p> <br>
+  <span class="content">Allow Moderators to Delete Tickets:</span> If the database has old tickets and the size is big delete old tickets.</p>
+<p><span class="content">Users can rate responses</span>: Every time a response is generated from a staff member will be included a link for rating the response, the end user can rate 5 times the same response and no more. These ratings will be visible in the Statistics Seccion. </p>
+<p><strong>Reports visible only for administrators</strong>: If selected only administrators will be able to watch reports. </p>
+<p><strong>Limit tickets created by user:</strong> Sets a time between tickets submissions or responses to avoid abuse from end user area. Values: 30seconds, 120s, 240s,300s,10min, 30min, 2h, 10h, Unlimited. If we select unlimited then restrictions will be removed, these restrictions aren't applied to staff or administrator. </p>
+<p><span class="content">Include previous responses:</span> Sometimes a ticket for being closed could require long interchange of responses, with this option enabled that interchange of responsed will be included in the email with notiffication. </p>
+<p><span class="content">Users can open responses clicking a url:</span> The end user for watching his tickets requires a password and username but if we wants he could open a ticket and respond it clicking a link. Login information will be included in the url. <br>
+</p>
+<p>  <span class="content">Number of tickets per page:</span> For faster viewing select 10, 20 50 or 100 <br>
+</p>
+<p><span class="content">Number of users per page:</span> Number of users displayed by page: 10 20 50 100 <br>
+</p>
+<p><span class="content">Everybody can access Knowledge base(without password):</span> Articles are web pages, if you want access will be grant for everybody without user and password.<br>
+</p>
+<p><span class="content">Users can add responses to previous articles:</span> Aplicable to every article of the base of articles.<br>
+</p>
+<h3 class="titulo">Email settings   </h3>
+<p><br>
+  <span class="content">Send method</span>: Internally is used Phpmailer, if you uses  Sendmail and the path is wrong, edit:  class.phpmailer.php</p>
+<p>  <span class="content">SMTP Authentication:</span> Required, usually true.</p>
+<p><span class="content">Outgoing Email(reply to):</span> Usually here is used an email address that is not read, example not_reply@mydomain.com, The end user must not be able to respond by email. </p>
+<p><span class="content">From name:</span> Example: Customer Support of bla...</p>
+<p> <span class="content">smtp account</span>: This must be a valid smtp account, example: source@mydomain.com</p>
+<p> <span class="content">smtp password</span>: For the previous account. </p>
+<p> <span class="content">The user receives an email if staff closes a ticket:</span> Options TRUE or FALSE</p>
+<p> <span class="content">Email the user if there is a new response:</span> Recommended TRUE, this notification will be emailed to the user. </p>
+<p><br>
+  <span class="content">Email Staff if there is a new ticket:</span> If you preffer, a notification will be sent to the <STRONG>Email for Notifications of the Departament</STRONG>,go to departaments and fill the &quot;email for notifications&quot;. Consider that this notification is not sent for every staff member of any given  departament.</p>
+<p> Options available are: TRUE, FALSE. Set to true if the tickets sytem isn't usually open in your web browser. Notifications for departaments are usefull if the departament has only one staff member and he  receives a new ticket sporadically. </p>
+<p>As you see notifications are sent to end users and  to departaments. Notifications for end users are sent using the email for &quot;<strong>Incoming e-mail</strong>&quot; , if the users response this notification a response to his current ticket will be added. </p>
+<p>&nbsp;</p>
+<p> <span class="content">Send notifications as html:</span> There are two options TRUE and FALSE, avoid using False, notifications will be sent as text. </p>
+<p> <span class="content">Email a copy of his ticket to user</span>: Recomended value TRUE</p>
+<p>&nbsp;</p>
+<h3>Creating tickets<a name="14" id="14"></a></h3>
+<p>End user are able to create tickets ckicking New Ticket. The end user needs to select a departament and a level of urgency. Also staff members and administrators are able to create new tickets, in this case tickets are sended to users not to departaments. </p>
+<h3 class="titulo">Multilanguaje support <a name="18" id="18"></a></h3>
+<p>If you want the tickets system in other languaje diferent from english,<strong> translate the files</strong> found in the directory &quot;languaje&quot; , by default only the file en.php (english) is operative. </p>
+<h3 class="titulo">Tickets status</h3>
+<p>A new ticket has the state <strong>&quot;Opened&quot;</strong>, and it will remain in this state until an staff member, user or administrator closes it(the case was resolved) or <strong>&quot;Hold&quot;</strong> the ticket(if the ticket requires special atencion). </p>
+<p><strong>&quot;Closed</strong>&quot; tickets can be opened again, only tickets who are not in &quot;close state&quot; can be responded. </p>
+<h3 class="titulo">Personalization<a name="16" id="16"></a></h3>
+<p><strong>Email notifications </strong></p>
+<p>When are created notifications by email, are used 4 template files: </p>
+<ul>
+  <li>email_new_ticket_from_user.php (when the end user creates a ticket) </li>
+  <li>email_new_ticket_from_user.txt (when the end user creates a tic ket) </li>
+  <li> email_notification.php (when the staff members creates a response) </li>
+  <li>email_notification.txt (when the staff members creates a response) </li>
+</ul>
+<p>Depending if you select notifications in plain text the text files will be used, in these files there are a few of constanst that are replaced, example: $message, $poll, etc. . You can alter the format of those  files, but keeping them  in the  &quot;templates&quot; folder. </p>
+<p><strong>Articles or database knowlegde</strong></p>
+<p>Every article is created from the file index.php, example: www.site.com/tickets/kbase/index.php</p>
+<p>Index.php uses two includes, for these reason you can replace <strong>index.php</strong> with your own template and add these two includes to index.php: <strong>header.php</strong> and <strong>cuerpo.php</strong></p>
+<p><strong>main tickets system</strong></p>
+<p>This section can not be changed easily, but here you can alter top.php, top2.php , bottom.php, tickets.php and ticket2.php. Top2.php and tickets2.php are used for  administrative users. </p>
+<p>You can select colors of buttons, consider that are used 4 colors for creating two png files with degradation of top navigation bar, the color of default text and  color of top.php. </p>
+<p>Facil HelpDesk supports several languajes but only english is operative, if you want translate the file: languajes/en.php to your own languaje and alter index.php</p>
+<p>For english exists the file en.php, if you edit index.php you will see it, en.php=en+.php. </p>
+<p>Locale: <br>
+&lt;<span class="red2">select name</span>=&quot;langdefault&quot; id=&quot;langdefault&quot;&gt;<br>
+&lt;option value=&quot;<strong>en</strong>&quot;SELECTED &gt;<strong>English</strong>&lt;/option&gt;<br>
+&lt;option value=&quot;no&quot; &gt;no&lt;/option&gt;<br>
+&lt;option value=&quot;es&quot; &gt;Espa&ntilde;ol&lt;/option&gt;<br>
+&lt;option value=&quot;fr&quot; &gt;french&lt;/option&gt;<br>
+&lt;option value=&quot;gm&quot; &gt;gm&lt;/option&gt;<br>
+&lt;/select&gt; </p>
+<p>You can add as many languajes as you want not only five. Creating an entry in the <span class="red2">select</span> and creating a file at folder &quot;languajes&quot; with the same value. </p>
+<h3 class="titulo">Email piping (requires cron) <a name="piping" id="piping"></a></h3>
+<p>Facil HelpDesk is able to handle  request from email, There is an script (by default: &quot;for_cron.php&quot; ) who will read your POP3 accounts and will create tickets, the username used for this purposes is &quot;Unregistered&quot;. </p>
+<p>This function reads <strong>emails and creates tickets sending notifications</strong>, but before of using email piping you should know  that <strong>your host provider could limit the number of emails deliverered from PHP</strong>, example: 200 emails/hour, if the script &quot;for_cron.php&quot; is executed every hour and there were 300 emails including 100 junk emails, email notifications will be lost for several email submissions. </p>
+<p><strong>Warning:</strong>  if you delete the user &quot;Unregistered&quot; of your database you will never be able to read those tickets because tickets coming from email are assigned to user &quot;Unregistered&quot;.</p>
+<p><img src="../images/emailpiping.png" width="898" height="205"></p>
+<p>Go to Departaments, you will see an email for every departament and it's password. These accounts have two purposes:</p>
+<ol>
+  <li>Send a notification every time that a new ticket is created from the web interface index.php -&gt; tickets.php </li>
+  <li>the script for_cron.php reads these email accounts periodically and creates tickets </li>
+</ol>
+<p>Be carefull with these accounts and passwords, if one of them is wrong the script won't work(for_cron.php), for watching the errors go to reports-&gt; email piping, look at the image, here cron will be executed every 5 minutes <strong>&quot;for_cron.php&quot;</strong>, if there are too many emails, consider adjusting the time interval to your needs.</p>
+<p> <img src="../images/cron.png" width="541" height="393"></p>
+<p>For your security rename the file: for_cron.php, use email accounts of the same email server or you will get errors. </p>
+<p>Example For creating email notifications for new tickets you use: <strong>not_reply@myweb.com</strong> the emails of yours departaments should be: <strong>sales@mysweb.com</strong>, <strong>support@myweb.com</strong>, etc. </p>
+<p>In our server(cromosoft.com) for testing purposes cron is executed every 15 minutes, it means that if you send an email to: sales@cromosoft.com, your email will be converted to ticket after of 15 minutes. </p>
+<p><strong>Tip:</strong> If you enable email piping, don't use the same email for notifications to staff members  or disable &quot;Email Staff if there is a new ticket&quot; as shown in the figure.</p>
+<p><img src="../images/disable_notif.gif" width="458" height="311"> </p>
+<h3 class="titulo"></h3>
+<p>If  email piping is enabled a notification is sent when an <strong>email is transferred to ticket</strong> as shown in the figure.<img src="../images/casenumber.gif" width="624" height="321" border="1"></p>
+<h3 class="titulo">Common Questions<a name="12"></a></h3>
+<p><strong><br>
+  Can I add as many staff users as I need?</strong><br>
+Yes , with the current model of licence that is posible.</p>
+<p><strong>Supports email piping?</strong></p>
+<p>Yes, this software  now supports email piping from version 1.2. </p>
+<p><strong>What happens if the attachment included in my email exceeds the allowed size?</strong></p>
+<p>The text is stored, but the attachament is deleted, a notification is sent saying the attachment was deleted it because was exceeded the file size.</p>
+<p><span class="titulo"></span></p>
+<p><span class="titulo">Typical Errors and solutions<a name="17" id="17"></a></span></p>
+<p><strong>Updating PHPMailer </strong></p>
+<ul>
+  <li>If you decide to update phpmailer, delete empty spaces of files: class.phpmailer.php, phpmailer.lang-en.php at the end of these files. Or the &quot;header&quot; command of php will fail. </li>
+</ul>
+<p><strong>During installation </strong></p>
+<ul>
+  <li>The file <strong>configuration.php</strong> must be writable for everybody (change to 777) </li>
+  <li>Create departaments and urgency levels before of creating tickets. Important!</li>
+</ul>
+<p><strong>Using the tickets system</strong></p>
+<ul>
+  <li>If you decide to close several tickets at once,  notifications won't will be sent, if you want notifications  open and close ticket by ticket. </li>
+  <li>The number of responses for a ticket(submitted by email) shows 0 but is incorrect, but there are responses when i open the ticket. <strong>Solution:</strong> check if the user <strong>Unregistered</strong> exists, if not then create the username <strong>Unregistered</strong> with name <strong>Unregistered</strong>, the counter for new tickets will be updated for new tickets.</li>
+</ul>
+<h3 class="titulo">Maintenance and limitations <a name="maintenance" id="maintenance"></a></h3>
+<p><strong>Maintenance</strong></p>
+<p>Facil HelpDesk uses a non transacctional database, MyISAM, with 15 tables, more tables will be added in  futured versions for advanced functions but these aren't important. </p>
+<p>For storage of tickets Facil HelpDesk  uses <strong>&quot;tickets_state&quot;</strong> and <strong>&quot;tickets_tickets&quot;</strong> , every valid ticket requires an entry in these tables. The most important is <strong>&quot;tickets_tickets&quot;</strong> if there is a ticket in the tickets_tickets who doesn't have an entry in tickets_state <strong>this ticket won't be visible</strong>. Manual work could be required to create an entry in this table. The other<strong> table who is critical is users</strong>, this table contains: username, password, etc.</p>
+<p>Check your tables and script(sometimes scripts gets corrupted on web servers) periodically, use your favorite tool for backup and restore of your database depending of the volume of tickets and <strong>set offline Facil HelpDesk during this task.</strong> </p>
+<p>Check and delete the file error_log of your web server if available for errors with php scripts.</p>
+<p><strong>Limitations</strong></p>
+<p><strong>number of tickets</strong></p>
+<p>The number of tickets is limited to a unsigned integer with size 10 (<FONT face=Arial size=1>BIGINT</FONT>), the number of tickets also is limited to  10 bytes. Example this ticket ID can be stored: </p>
+<p> <strong>tickets_id: 
+12345678912345700</strong>, every  ticket inserted will add 1 to  tickets_id.</p>
+<p><strong>Related with &quot;email piping&quot;</strong></p>
+<p>This function reads <strong>emails and creates tickets sending notifications</strong>, but before of using email piping you should know that <strong>your hosting provider could limit the number of emails from PHP</strong>, example: 200 emails/hour, if the script &quot;for_cron.php&quot; is executed every hour imagine for a moment that  during it's execution there are 300 emails including 100 junk emails, waiting be converted to tickets, but there is a limitation(200 emails/hour) and 100 notifications will be lost permanently. But tickets will be stored, in every case we are supposing that the entire queue of email is processed.</p>
+<p>&nbsp;</p>
+<p>FACIL HELPDESK CUSTOMER MANAGEMENT SOFTWARE EULA<a name="13"></a></p>
+<p>Copyright &copy; 2003-2007 Cromosoft Technologies<br>
+  Facil HelpDesk CUSTOMER MANAGEMENT SOFTWARE<br>
+  Facil HelpDesk EULA (END USER LICENSE AGREEMENT)<br>
+  ----------------------------------------------------------------------<br>
+  Facil HelpDesk is commercial software, only users who have purchased a valid<br>
+  license through cromosoft.com and agree to the terms of this EULA can<br>
+  install this product.<br>
+  ----------------------------------------------------------------------<br>
+  LICENSE FOR ONE (1) Facil HelpDesk<br>
+  This EULA is a CONTRACT between you and Cromosoft.com which covers<br>
+  your use of the software product that accompanies this EULA. The software<br>
+  will be referred to herein as the &quot;Software Product&quot;. A software license,<br>
+  issued to a designated user only by cromosoft.com, is required for each user<br>
+  of the Software Product.<br>
+  A software license is required for each installation of Facil HelpDesk, by<br>
+  explicitly accepting this EULA or by purchasing/downloading or installing<br>
+  Facil HelpDesk you are acknowledging and agreeing to the terms outlined below:<br>
+  Purchasing Facil HelpDesk grants you the license for one installation on one<br>
+  computer only, if you require multiple installations of Facil HelpDesk you must<br>
+  have additional licenses for each installation.<br>
+</p>
+<p>REFUND POLICY<br>
+  Refunds will be given at the discretion of Cromosoft.com. In the<br>
+  event a refund is given your license will be terminated and you, the client,<br>
+  agree to destroy any copies of the software and any installations of Facil Help Desk.<br>
+</p>
+<p>NO RIGHT TO TRANSFER.<br>
+  This license is non transferable, you may not re-sell this product or any<br>
+  of the code included in any way.<br>
+  You must not lease, rent, re-distribute the product to any party without<br>
+  the developers prior written consent and approval.<br>
+</p>
+<p>INTELLECTUAL PROPERTY RIGHTS<br>
+  Facil HelpDesk is protected by copyright laws, you must not remove or alter any<br>
+  copyright notices(bottom template) on the Facil HelpDesk software without doing an additional payment.<br>
+  WITHOUT WARRANTIES<br>
+  YOU ACCEPT THE SOFTWARE PRODUCT &quot;AS IS&quot; AND Cromosoft.com MAKE NO WARRANTY<br>
+  AS TO ITS USE, PERFORMANCE, OR OTHERWISE.<br>
+</p>
+<p>LIMITATION OF LIABILITY<br>
+  THE DEVELOPER OF Facil HelpDesk WILL HOLD NO LIABILITY OVER DAMAGES WHICH MAY<br>
+  RESULT DIRECTLY OR INDIRECTLY FROM THE PRODUCTS USE , INCLUDING BUT NOT<br>
+  LIMITED TO: LOSS OF DATA, FINANCIAL LOSS, LOSS OF BUSINESS. THE ENTIRE RISK<br>
+  ARISING OUT OF USE OR PERFORMANCE OF THE SOFTWARE PRODUCT REMAINS WITH YOU.<br>
+TERMINATION OF THIS LICENSE</p>
+<p><br>
+  Cromosoft.com reserve the right to terminate your license if you fail to<br>
+  comply with any term of this EULA. In such an event, you, the client,<br>
+  agree to destroy any copies of the software and the installation.</p>
+</body>
+</html>

@@ -1,0 +1,12 @@
+Departamento de $departament, una respuesta esta en espera,
+
+Ticket ID: $id 
+Asunto: $subjet 
+Fecha:$date
+____________________________________________________________________ 
+
+  $message
+____________________________________________________________________ 
+
+
+$siteurl

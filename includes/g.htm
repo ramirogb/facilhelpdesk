@@ -1,0 +1,15 @@
+<html>
+<script language="JavaScript" type="text/javascript">
+window.open('../tickets.php?action=create_form','popup','width=700,height=500,scrollbars=no,resizable=no,toolbar=no,directories=no,location=no,menubar=no,status=no,left=0,top=0');
+
+function closeWindow() { 
+//uncomment to open a new window and close this parent window without warning 
+//var newwin=window.open("popUp.htm",'popup',''); 
+if(navigator.appName=="Microsoft Internet Explorer") { 
+this.focus();self.opener = this;self.close(); } 
+else { window.open('','_parent',''); window.close(); } 
+} 
+
+</script>
+<body  onLoad="self.close();" ></body>
+</html>

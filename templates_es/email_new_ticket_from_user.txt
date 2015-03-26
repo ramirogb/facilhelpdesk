@@ -1,0 +1,24 @@
+Estimado $name,
+
+
+Su ticket ha sido recibido. Un integrante de nuestro equipo, lo atenderá. Para referencia abajo están los detalles del ticket
+
+Ticket ID: $id
+Usuario: $username
+Asunto: $subjet
+Urgencia: $urgency
+Departmento: $departament
+Fecha: $date
+____________________________________________________________________
+
+$message
+____________________________________________________________________ 
+
+
+Puedes revisar el estado o contestar en esta dirección:
+
+
+$open_ticket
+O en: $siteurl identificandose mediante usuario y password. 
+
+$footer
