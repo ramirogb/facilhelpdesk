@@ -1,6 +1,7 @@
 # facilhelpdesk
 Ticket system based in PHP, licence GNU Version 2
-Facil HelpDesk 3.2  June 20, 2014
+
+Facil HelpDesk 3.2  June 20, 2014(marzo 2015)
 
 
 What is new?
