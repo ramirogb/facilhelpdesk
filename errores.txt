@@ -1,0 +1,14 @@
+Posibles errores al actualizar
+
+no graba los cambios
+
+actualize tickets2.php y config.lib.php y todos los archivos vaya a settings y de grabar.
+
+ello se debe por la forma como opera la grabacion del archivo de configuration de la nueva version(desde la 2.3), puede ocurrir al actulizar de version.
+
+edite a mano el archivo configuration.php, elimine las lineas desde la numero 40,excepto la ultima de cierra de bloque de codigo PHP.
+ grabe el archivo
+
+
+Settings are not saved
+update all includes and all other files, go to settings and clik save.
